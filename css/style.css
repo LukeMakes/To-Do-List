@@ -1,0 +1,239 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(173, 173, 173);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.container {
+    padding: 10px;
+    width: 380px;
+    margin: 20px auto;
+}
+
+.header {
+    width: 380px;
+    height: 200px;
+    background-image: url('../img/bg2.jpg');
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+}
+
+/* Showing today's Date */
+#fulldate {
+    position: relative;
+    top: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+}
+
+/* Clear Button */
+.clear {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 30px;
+}
+
+.clear i {
+    /* font-size: 30px; */
+    color: #FFF;
+}
+
+.clear p {
+    position: relative;
+    bottom: 76px;
+    left: 40px;
+    color: #FFF;
+    font-size: 30px;
+}
+
+.clear i:hover {
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+}
+
+.clear:hover {
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+
+}
+
+
+/* Info on remaining Tasks */
+.info {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, rgba(15, 121, 184, 0.7) -10%, rgba(0, 62, 248, 0.87) 180%);
+
+}
+
+.info .left {
+    float: left;
+    padding-left: 10px;
+    height: 100px;
+}
+
+.info .right {
+    float: right;
+    padding-right: 10px;
+    height: 100px;
+}
+
+.info .middle {
+    position: absolute;
+    width: 140px;
+    height: 100px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding-right: 30px;
+}
+
+.info #total_count,
+.info #total_tasks,
+.info #done_count,
+.info #done_tasks,
+.info #remaining_done,
+.info #remaining_tasks {
+    margin-top: 10px;
+    margin-bottom: 7px;
+    font-size: 19px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.info #total_tasks,
+.info #done_tasks,
+.info #remaining_tasks {
+    font-weight: normal;
+    font-size: 24px;
+    margin-top: -2px;
+    margin-bottom: 5px;
+}
+
+
+/*Task List*/
+.content {
+    width: 380px;
+    height: 350px;
+    max-height: 350px;
+    background-color: #FFF;
+    overflow: auto;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content ul {
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    width: 380px;
+    height: 45px;
+    min-height: 45px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item i.co {
+    position: absolute;
+    font-size: 25px;
+    padding-left: 5px;
+    left: 15px;
+    top: 10px;
+}
+
+.item i.co:hover {
+    cursor: pointer;
+}
+
+.fa-check-circle {
+    color: #006bb2;
+}
+
+.item p.text {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    left: 50px;
+    top: 7px;
+    background-color: #FFF;
+    max-width: 285px;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.item i.de {
+    position: absolute;
+    font-size: 25px;
+    right: 15px;
+    top: 10px;
+}
+
+.item i.de:hover {
+    color: #af0000;
+    cursor: pointer;
+}
+
+/* add Item */
+.add-item {
+    position: relative;
+    width: 360px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
+    border-top: 1px #0367a6 solid;
+}
+
+.add-item i {
+    position: absolute;
+    font-size: 40px;
+    color: #0367a6;
+}
+
+.add-item input {
+    position: absolute;
+    left: 50px;
+    height: 35px;
+    width: 310px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.add-item input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #0367a6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+.add-item input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #0367a6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
